@@ -1,0 +1,16 @@
+.div-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 30%;
+  background-color: rgba(175, 175, 163, 0.4);
+  padding: 20px;
+}
+.signin-font-size{
+	font-size: x-large;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+}

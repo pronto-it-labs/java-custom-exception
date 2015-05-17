@@ -1,0 +1,10 @@
+.classpath
+.project
+.settings/
+.idea/
+.metadata/
+target/
+ui/node_modules/
+src/main/resources/static/
+ui/app/js/bin/template/
+ui/app/css/sass/

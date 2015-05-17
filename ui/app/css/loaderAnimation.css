@@ -1,0 +1,57 @@
+.loader {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border: 4px solid #f89408;
+  top: 0;
+  left: 0;
+  bottom: 100px;
+  right: 0;
+  margin: auto;
+  animation: loader 4s infinite ease;
+  -webkit-animation: loader 4s infinite ease;
+  z-index: 10;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #f89408;
+  animation: loader-inner 4s infinite ease-in;
+  -webkit-animation: loader-inner 4s infinite ease-in;
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
