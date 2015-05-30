@@ -11,9 +11,13 @@ angular.module( 'user-login', [] ).config( function( $stateProvider ) {
   $scope.validateUser = function( email ) {
     LoginService.validateUser( email ).error( function( response ) {
       console.log( "error response: ", response );
-      $scope.errorMessage = response.message;
+      $scope.errorMessage = response.messages[0];
+      toastr.error( $scope.errorMessage );
     } ).success( function( response ) {
+      $scope.successMessage = response.messages[0];
+      toastr.success( $scope.successMessage );
       console.log( "success response: ", response );
+      
     } );
   };
   $scope.goToHomePage = function() {

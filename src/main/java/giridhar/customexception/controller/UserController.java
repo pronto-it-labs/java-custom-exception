@@ -28,13 +28,13 @@ public class UserController {
   @ResponseBody
   public ResponseEntity<RestResponse> signupUser(@RequestBody User user) {
     LOGGER.info("user to save is: "+user);
-    return new ResponseEntity<RestResponse>(new RestResponse(Boolean.TRUE, "", userService.save(user)), HttpStatus.OK);
+    return new ResponseEntity<RestResponse>(new RestResponse(Boolean.TRUE, "Succesfully Signed Up!", userService.save(user)), HttpStatus.OK);
   }
 
   @RequestMapping(value = "/findby-email", method = RequestMethod.POST)
   @ResponseBody
   public ResponseEntity<RestResponse> findByEMail(@RequestBody User user) throws UserNotFoundException {
     LOGGER.info("User id to find is: "+user.getEmail());
-    return new ResponseEntity<RestResponse>(new RestResponse(Boolean.TRUE, "", userService.findByEmailId(user.getEmail())), HttpStatus.OK);
+    return new ResponseEntity<RestResponse>(new RestResponse(Boolean.TRUE, "Succesfully Logged In!", userService.findByEmailId(user.getEmail())), HttpStatus.OK);
   }
 }

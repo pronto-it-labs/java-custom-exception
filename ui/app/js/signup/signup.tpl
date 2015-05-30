@@ -6,7 +6,7 @@
     <div role="alert" ng-show="errorMessage">{{errorMessage}}</div>
     <div class="form-group">
       <label for="firstName">First Name</label>
-      <input type="email" class="form-control" id="firstName" placeholder="Enter email" ng-model="SignupCtrl.user.firstName"> </div>
+      <input type="text" class="form-control" id="firstName" placeholder="First Name" ng-model="SignupCtrl.user.firstName"> </div>
     <div class="form-group">
       <label for="lastName">Last Name</label>
       <input type="text" placeholder="Last Name" id="lastName" class="form-control" ng-model="SignupCtrl.user.lastName"> </div>

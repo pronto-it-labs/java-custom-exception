@@ -20,8 +20,12 @@ angular.module( 'user-signup', [] ).config( function( $stateProvider ) {
     console.log( '$scope.userGender', $scope.userGender );
     SignupService.signUpUser( user ).error( function( response ) {
       console.log( "errorMessage".response );
+      $scope.errorMessage=response.messages[0];
+      console.log("$scope.errorMessage",$scope.errorMessage);
     } ).success( function( response ) {
       console.log( "sucess", response );
+      $scope.sucessMessage = response;
+      console.log("$scope.sucessMessage",$scope.sucessMessage);
     } );
   };
 } );

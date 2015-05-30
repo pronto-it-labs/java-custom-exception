@@ -1,6 +1,6 @@
 <div class="div-center">
   <form ng-submit="validateUser(LoginCtrl.user)">
-    <div role="alert" class="form-group" ng-show="errorMessage">{{errorMessage}}</div>
+    <div role="alert" class="form-group " ng-show="errorMessage">{{errorMessage}}</div>
     <div class="form-group center">
       <span class="signin-font-size">Sign In</span>
     </div>
