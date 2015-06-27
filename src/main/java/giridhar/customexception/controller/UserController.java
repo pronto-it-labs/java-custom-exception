@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -33,8 +34,8 @@ public class UserController {
 
   @RequestMapping(value = "/findby-email", method = RequestMethod.POST)
   @ResponseBody
-  public ResponseEntity<RestResponse> findByEMail(@RequestBody User user) throws UserNotFoundException {
-    LOGGER.info("User id to find is: "+user.getEmail());
-    return new ResponseEntity<RestResponse>(new RestResponse(Boolean.TRUE, "Succesfully Logged In!", userService.findByEmailId(user.getEmail())), HttpStatus.OK);
+  public ResponseEntity<RestResponse> findByEMail(@RequestParam String email) throws UserNotFoundException {
+    LOGGER.info("User id to find is: "+email);
+    return new ResponseEntity<RestResponse>(new RestResponse(Boolean.TRUE, "Succesfully Logged In!", userService.findByEmailId(email)), HttpStatus.OK);
   }
 }

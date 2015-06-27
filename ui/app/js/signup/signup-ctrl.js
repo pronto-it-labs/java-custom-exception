@@ -1,4 +1,4 @@
-angular.module( 'user-signup', [] ).config( function( $stateProvider ) {
+angular.module( 'signup', [] ).config( function( $stateProvider ) {
   $stateProvider.state( 'signup', {
     url: '/signup',
     templateUrl: 'signup/signup.tpl',
