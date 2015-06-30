@@ -1,3 +1,7 @@
+<div class="pull-right" ui-sref="home">
+	
+<button class="btn btn-block btn-success pull-right">Back</button>
+</div>
 <div class="div-center">
   <div class="form-group center">
   </div>

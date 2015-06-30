@@ -3,7 +3,6 @@
     <span class="signin-font-size">Sign Up</span>
   </div>
   <form ng-submit="signUpUser(SignupCtrl.user)">
-    <div role="alert" ng-show="errorMessage">{{errorMessage}}</div>
     <div class="form-group">
       <label for="firstName">First Name</label>
       <input type="text" class="form-control" id="firstName" placeholder="First Name" ng-model="SignupCtrl.user.firstName"> </div>

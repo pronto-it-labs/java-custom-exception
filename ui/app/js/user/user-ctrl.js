@@ -12,14 +12,8 @@ angular.module( 'user', [] ).config( function( $stateProvider ) {
 	} );
 } ).controller('UserCtrl',  function($scope, $stateParams, UserService){
 	$scope.UserCtrl = {};
-	// console.log("$stateParams.id",$stateParams.id);
 	var email = $stateParams.id;
-	console.log("email",email);
 	UserService.findUserByEmail(email).success(function(response){
-		console.log("response",response);
-		// $scope.userName = response.data.userName;
 		$scope.user = response.data;
-	}).error(function(response){
-		console.log("error response",response);
 	});
 });
