@@ -6,14 +6,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DatabaseAdministrativeService {
-  /**
-   *@author Giridhar
-   *
-   **/
-  @Autowired
-  private MongoTemplate mongoTemplate;
-  
-  public void deleteAll(){
-    mongoTemplate.getDb().dropDatabase();
-  }
+    /**
+     * @author Giridhar
+     **/
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
+    public void deleteAll() {
+        mongoTemplate.getDb().dropDatabase();
+    }
 }

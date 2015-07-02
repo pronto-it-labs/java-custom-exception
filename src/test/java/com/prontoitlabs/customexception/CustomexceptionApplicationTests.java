@@ -21,17 +21,18 @@ import com.prontoitlabs.customexception.service.UserService;
 @ActiveProfiles("test")
 public class CustomexceptionApplicationTests {
 
-  @Autowired
-  private DatabaseAdministrativeService databaseAdministrativeService;
+    @Autowired
+    private DatabaseAdministrativeService databaseAdministrativeService;
 
-  @Autowired
-  private UserService userService;
+    @Autowired
+    private UserService                   userService;
 
-  @Test
-  public void contextLoads() {}
+    @Test
+    public void contextLoads() {
+    }
 
-  @After
-  public void tearDown() {
-    databaseAdministrativeService.deleteAll();
-  }
+    @After
+    public void tearDown() {
+        databaseAdministrativeService.deleteAll();
+    }
 }
